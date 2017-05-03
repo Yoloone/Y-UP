@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="DateTypeArray">
+        <item>过去七天</item>
+        <item>过去六周</item>
+        <item>过去一年</item>
+    </string-array>
+</resources>

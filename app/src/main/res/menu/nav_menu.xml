@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_habit"
+        android:icon="@drawable/house"
+        android:title="习惯打卡"
+        />
+    <item
+        android:id="@+id/nav_statistic"
+        android:icon="@drawable/statistic"
+        android:title="图表统计"
+        />
+    <item
+        android:id="@+id/nav_stamp"
+        android:icon="@drawable/stamp"
+        android:title="邮票收集"
+        />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/settings"
+        android:title="设置"
+        />
+</group>
+</menu>
