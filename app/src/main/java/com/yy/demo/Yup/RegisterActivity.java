@@ -59,11 +59,11 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void done(MyUser myUser, BmobException e) {
                     if(e == null){
-                        Toast.makeText(RegisterActivity.this,"注册成功！请到该邮箱处验证"+ myUser.getUsername(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this,"注册成功！"+ myUser.getUsername(),Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
                         startActivity(intent);
                     }else{
-                        Toast.makeText(RegisterActivity.this,"该邮箱已被注册",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this,"邮箱格式错误或邮箱已被注册",Toast.LENGTH_SHORT).show();
                         Log.e("register", "done: ",e );
                     }
                 }

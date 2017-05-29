@@ -126,7 +126,7 @@ public class HabitAdapter extends ArrayAdapter<Habit>{
                     viewHolder.habitDaysTv.setText("打卡"+habit.getLasted_days()+"天");
 //                    判断是否赠送邮票
                     int num = habit.getLasted_days();
-                    if(num % 7 == 0 && num < BmobUser.getCurrentUser(MyUser.class).getStamp_num()){
+                    if(num % 7 == 0){
                         showAddStampDialog();
                     }
                 }else{

@@ -67,6 +67,8 @@ public class StatisticFrame extends Fragment{
         TextView tvCountDays = (TextView) view.findViewById(R.id.tv_count_days);
 
         int countDays = 0;
+        if(habitList == null || habitList.size() == 0)
+            return view;
         for(Habit habit : habitList){
             habitNameList.add(habit.getHabit_name());
             countDays += habit.getLasted_days();

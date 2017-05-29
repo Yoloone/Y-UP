@@ -94,12 +94,16 @@ public class SettingsFrame extends Fragment {
         }else{
             // 已登录，正在进入应用
             txt_mail.setText(user.getUsername());
+
             BmobFile avatarFile = user.getPhoto();
+            if(avatarFile == null)
+                Glide.with(this).load(R.drawable.person).into(img_userphoto);
+            else{
             String avatarUrl = avatarFile.getFileUrl();
             Log.d("photo_url:",avatarUrl);
             // 根据头像地址(avatarUrl)下载头像并显示在应用界面中...
             Glide.with(this).load(avatarUrl)
-                    .error(R.drawable.pk).into(img_userphoto);
+                    .error(R.drawable.pk).into(img_userphoto);}
         }
 
         //绑定监听事件
@@ -209,7 +213,7 @@ public class SettingsFrame extends Fragment {
             public void done(BmobException e) {
                 if(e==null){
                     Toast.makeText(getApplicationContext(),
-                            "头像上传成功"+avatarFile.getFileUrl(),Toast.LENGTH_SHORT).show();
+                            "头像上传成功",Toast.LENGTH_SHORT).show();
                     updateUser(avatarFile);
                 }else{
                     Toast.makeText(getApplicationContext(),
